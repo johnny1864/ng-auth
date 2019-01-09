@@ -8,11 +8,6 @@ import { AuthService } from "./auth.service";
 })
 export class AppComponent {
   title = "ng-auth-frontend";
-  post;
-  constructor(private _auth: AuthService) {
-    this._auth.getPost().subscribe(data => {
-      this.post = data;
-      console.log(this.post);
-    });
-  }
+  posts;
+  constructor(private _auth: AuthService) {}
 }

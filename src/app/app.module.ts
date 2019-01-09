@@ -8,15 +8,20 @@ import { AppComponent } from "./app.component";
 import { HttpClientModule } from "@angular/common/http";
 import { MaterialModule } from "./material.module";
 import { FormsModule } from "@angular/forms";
+import { Routes, RouterModule } from "@angular/router";
+import { RegisterComponent } from "./register/register.component";
+
+const routes: Routes = [{ path: "register", component: RegisterComponent }];
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, RegisterComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
