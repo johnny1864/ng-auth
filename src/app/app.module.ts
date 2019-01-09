@@ -10,11 +10,12 @@ import { MaterialModule } from "./material.module";
 import { FormsModule } from "@angular/forms";
 import { Routes, RouterModule } from "@angular/router";
 import { RegisterComponent } from "./register/register.component";
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [{ path: "register", component: RegisterComponent }];
 
 @NgModule({
-  declarations: [AppComponent, RegisterComponent],
+  declarations: [AppComponent, RegisterComponent, LoginComponent],
   imports: [
     BrowserModule,
     HttpClientModule,

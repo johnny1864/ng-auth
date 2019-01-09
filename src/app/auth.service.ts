@@ -7,7 +7,10 @@ import { HttpClient } from "@angular/common/http";
 export class AuthService {
   constructor(private http: HttpClient) {}
 
-  getPost() {
-    return this.http.get("http://localhost:5000/posts");
+  registerUser(user) {
+    console.log(user);
+    return this.http
+      .post(`http://localhost:5000/register`, user)
+      .subscribe(data => console.log(data));
   }
 }
